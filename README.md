@@ -6,4 +6,3 @@
 * Choose Random Forest as it was performing better based on MAE
 * Did Hyperparameter Tuning on Random Forest model
 * Used Flask and html for frontend
-* Deployed using Heroku

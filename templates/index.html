@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Car Price Prediction</h2>
+            
+            <h3> Year</h3>
+            <input id = "first" name = "Year" type = "number">
+            
+            <h3> What is the Showroom Price? (In Lakhs)</h3>
+            <input id = "second" name = "Present_Price" required = "required">
+            
+            <h3> Total Kilometres Drived? </h3>
+            <input id = "third" name = "Kms_Driven" required = "required">
+            
+            <h3> How many Owners previously drived the Car? (0, 1, 3) </h3>
+            <input id = "fourth" name = "Owner" required = "required">
+            
+            <h3> What is Fuel Type? </h3>
+            <select id = "fifth" name = "Fuel_Type_Petrol" required = "required">
+                <option value = "Petrol" > Petrol </option>  
+                <option value = "Diesel" > Diesel </option>  
+                <option value = "CNG" > CNG </option>  
+            </select>
+            
+            <h3> Are you a Dealer or Individual? </h3>
+            <select id = "sixth" name = "Seller_Type_Individual" required = "required">
+                <option value = "Dealer" > Dealer </option>  
+                <option value = "Individual" > Individual </option>  
+            </select>
+                
+            <h3> Transmission Type</h3>
+            <select id = "seventh" name = "Transmission_Manual" required = "required">
+            <option value = "Manual" > Manual Car</option>
+            <option value = "Automatic" > Automatic Car</option>
+            </select>
+            <br><br>
+            
+            <button id = "sub" type="submit"> calculate the Selling Price </button> 
+    </form>
+<br><br><h3>{{ predictionTexts }}<h3>
+    </div>
+
+
+</html>
